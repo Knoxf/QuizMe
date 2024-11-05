@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="comp3350.lakers.quizme.presentation.InsertQuiz.InsertQuizFragment"
+    android:id="@+id/quiz_insert_fragment_container"
+    tools:ignore="UseSwitchCompatOrMaterialXml">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/nextQuestion"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_menu_save"
+        android:layout_gravity="bottom|end"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/endOfQuestionInsert"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_delete"
+        android:layout_gravity="bottom|start"
+        />
+
+    <Switch
+        android:id="@+id/switchQuizType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="-40dp"
+        android:textColor="#000000"
+        android:text="Long Answer" />
+
+    <TextView
+        android:id="@+id/questionType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center"
+        android:layout_marginTop="190dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="75dp"
+        android:text="Multiple Choice" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Category"
+            android:maxLength="100"
+            app:errorEnabled="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/quizname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:hint="Quiz name"
+            android:maxLength="100"
+            app:errorEnabled="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LongAnswerQuestionHelper"
+        android:layout_marginTop="190dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/LongAnswerQuestion"
+        android:layout_marginTop="190dp"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:hint="Question"
+        android:maxLength="1000"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LongAnswerAnswerHelper"
+        android:layout_marginTop="190dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/LongAnswerAnswer"
+        android:layout_marginTop="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:hint="Answer"
+        android:maxLength="1000"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/multipleQuestionQuestionHelper"
+        android:layout_marginTop="130dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/multipleQuestionQuestion"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="Question"
+        app:errorEnabled="true"
+        android:maxLength="1000"/>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/multipleQuestionOptionAHelper"
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/multipleQuestionOptionA"
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="Option A"
+        android:maxLength="1000"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/multipleQuestionOptionBHelper"
+        android:layout_marginTop="220dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/multipleQuestionOptionB"
+        android:layout_marginTop="220dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="Option B"
+        android:maxLength="1000"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/multipleQuestionOptionCHelper"
+        android:layout_marginTop="290dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/multipleQuestionOptionC"
+        android:layout_marginTop="290dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="Option C"
+        android:maxLength="1000"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/multipleQuestionOptionDHelper"
+        android:layout_marginTop="360dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/multipleQuestionOptionD"
+        android:layout_marginTop="360dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="Option D"
+        android:maxLength="1000"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/multipleQuestionAnswerHelper"
+        android:layout_marginTop="430dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/multipleQuestionAnswer"
+        android:layout_marginTop="430dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:maxLength="1000"
+        android:hint="Answer: same text as option" />
+
+
+</FrameLayout>

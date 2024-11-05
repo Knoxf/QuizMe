@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:id="@+id/mainPage">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_bar_main"
+        />
+
+    <TextView
+        android:id="@+id/noQuizText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please add a quiz by pressing the star button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="Log out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="?android:borderlessButtonStyle"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryListRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/CreateQuizFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:src="@android:drawable/ic_input_add"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/add_fab"
+        app:layout_constraintEnd_toEndOf="@+id/add_fab" />
+
+    <TextView
+        android:id="@+id/createQuizText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Add Quiz"
+        app:layout_constraintBottom_toBottomOf="@+id/CreateQuizFab"
+        app:layout_constraintEnd_toStartOf="@+id/CreateQuizFab"
+        app:layout_constraintTop_toTopOf="@+id/CreateQuizFab" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ShowByCategoryFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:src="@android:drawable/ic_menu_sort_by_size"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/CreateQuizFab"
+        app:layout_constraintEnd_toEndOf="@+id/CreateQuizFab"
+        app:layout_constraintStart_toStartOf="@+id/CreateQuizFab" />
+
+    <TextView
+        android:id="@+id/ShowByCategoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Sort by category"
+        app:layout_constraintBottom_toBottomOf="@+id/ShowByCategoryFab"
+        app:layout_constraintEnd_toStartOf="@+id/ShowByCategoryFab"
+        app:layout_constraintTop_toTopOf="@+id/ShowByCategoryFab" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ShowByNameFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:src="@android:drawable/ic_menu_sort_by_size"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/ShowByCategoryFab"
+        app:layout_constraintEnd_toEndOf="@+id/ShowByCategoryFab"
+        app:layout_constraintStart_toStartOf="@+id/ShowByCategoryFab" />
+
+    <TextView
+        android:id="@+id/ShowByNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Show all Quizzes"
+        app:layout_constraintBottom_toBottomOf="@+id/ShowByNameFab"
+        app:layout_constraintEnd_toStartOf="@+id/ShowByNameFab"
+        app:layout_constraintTop_toTopOf="@+id/ShowByNameFab" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryParentRecyclerView"
+        android:layout_width="370dp"
+        android:layout_height="680dp"
+        android:layout_marginTop="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ShowAchievementsFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/ShowByNameFab"
+        app:layout_constraintEnd_toEndOf="@+id/ShowByNameFab"
+        app:layout_constraintStart_toStartOf="@+id/ShowByNameFab"
+        app:srcCompat="@android:drawable/ic_menu_compass" />
+
+    <TextView
+        android:id="@+id/ShowAchievementsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Achievements"
+        app:layout_constraintBottom_toBottomOf="@+id/ShowAchievementsFab"
+        app:layout_constraintEnd_toStartOf="@+id/ShowAchievementsFab"
+        app:layout_constraintTop_toTopOf="@+id/ShowAchievementsFab" />
+
+    <SearchView
+        android:id="@+id/searchQuiz"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="-50dp"
+        android:text = "Quiz name"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
